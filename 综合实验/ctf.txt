@@ -1,0 +1,3 @@
+I love CTF！
+
+CTF (Capture The Flag) is commonly translated as a flag competition in Chinese, which refers to a form of technical competition between network security technicians in the field of network security. CTF originated from the 1996 DEFCON Global Hacker Conference, replacing the previous way in which hackers engaged in technical competition by launching real attacks on each other. It has become a popular form of competition in the global cybersecurity community, with over 50 international CTF events held globally in 2013. As the birthplace of the CTF competition system, DEFCON CTF has also become the world's highest technological level and influential CTF competition, similar to the "World Cup" in the CTF arena.
