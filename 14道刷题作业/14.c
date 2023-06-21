@@ -12,13 +12,13 @@ void fun(struct xs *head)
 	while(cur!=NULL)
 	{
 		pre=head;
-		next=cur->next;				//Ã¿´ÎÒ²Ö»ÊÇ±éÀúÒ»¸öºó°ë½Úµã£¬ÀàËÆÓÚ²åÈëÅÅÐò
-		cur->next=NULL;		//ÏÈ»®·ÖµÚÒ»¸öÔªËØÎªË³ÐòÐòÁÐ£¬È»ºó½«ºóÃæµÄµÄÖð¸ö±È½Ï²åÈë
-		while(pre->next!=NULL&&pre->next->data<=cur->data) //ÔÚÁíÒ»°ëÁ´±í(cur)ÖÐÓöµ½Ð¡µÄ¾ÍÍ£Ö¹Ñ­»·
+		next=cur->next;				//æ¯æ¬¡ä¹Ÿåªæ˜¯éåŽ†ä¸€ä¸ªåŽåŠèŠ‚ç‚¹ï¼Œç±»ä¼¼äºŽæ’å…¥æŽ’åº
+		cur->next=NULL;		//å…ˆåˆ’åˆ†ç¬¬ä¸€ä¸ªå…ƒç´ ä¸ºé¡ºåºåºåˆ—ï¼Œç„¶åŽå°†åŽé¢çš„çš„é€ä¸ªæ¯”è¾ƒæ’å…¥
+		while(pre->next!=NULL&&pre->next->data<=cur->data) //åœ¨å¦ä¸€åŠé“¾è¡¨(cur)ä¸­é‡åˆ°å°çš„å°±åœæ­¢å¾ªçŽ¯
 		{
 			pre=pre->next;
 		}
-		cur->next=pre->next;   //Í£Ö¹Ñ­»·ºó½«ºóÒ»¶Î²åÈëµ½Ç°Ò»¶ÎºÏÊÊµÄÎ»ÖÃ
+		cur->next=pre->next;   //åœæ­¢å¾ªçŽ¯åŽå°†åŽä¸€æ®µæ’å…¥åˆ°å‰ä¸€æ®µåˆé€‚çš„ä½ç½®
 		pre->next=cur;         
 		cur=next;
 	}
@@ -123,7 +123,7 @@ void create(struct  xs  *hd,int  a[],int  n)
 		struct xs *cur=(struct xs*)malloc(sizeof(struct xs));
 		cur->cj=a[i];
 		tmp->next=cur;
-		tmp=cur;   //tepÊ¼ÖÕÎª×îÐÂ½ÚµãµÄÇ°Ò»¸ö
+		tmp=cur;   //tepå§‹ç»ˆä¸ºæœ€æ–°èŠ‚ç‚¹çš„å‰ä¸€ä¸ª
 		tmp->next=NULL;
 	}
 }
@@ -164,7 +164,7 @@ void create(struct xs *hd,int n)
 	{
 		p=(struct xs*)malloc(sizeof(struct xs));
 		p->cj=i;
-		p->next=hd->next;   //ºÍÎ²²å·¨Çø±ð¾ÍÊÇ£¬°Ñ¾ÉµÄ·ÅÐÂµÄÇ°Ãæ(next),¶øÎ²²å·¨ÊÇ°ÑÐÂµÄ·Å¾ÉµÄÇ°Ãæ
+		p->next=hd->next;   //å’Œå°¾æ’æ³•åŒºåˆ«å°±æ˜¯ï¼ŒæŠŠæ—§çš„æ”¾æ–°çš„å‰é¢(next),è€Œå°¾æ’æ³•æ˜¯æŠŠæ–°çš„æ”¾æ—§çš„å‰é¢
 		hd->next=p;
 	}
 }
@@ -204,5 +204,4 @@ void print(ListNode* hd)
     {
         printf("%d", d[i]); 
     }
-   printf("\n");
 }
